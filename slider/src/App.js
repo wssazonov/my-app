@@ -2,27 +2,32 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Grid, Row, Col } from 'react-bootstrap';
+
+// import Grid from 'react-bootstrap/lib/Grid';
+// import Row from 'react-bootstrap/lib/Row';
+// import Col from 'react-bootstrap/lib/Col';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="wrapper">
+          <SayFullName name="Vyacheslav" surname="Sazonov" link="vk.com" />
+          <SayFullName name="Petr" surname="Sazonov" link="vk.com" />
+          <SayFullName name="Ivan" surname="Sazonov" link="vk.com" />
       </div>
     );
   }
+}
+
+
+function SayFullName(props){
+  return (
+      <div>
+          <h1> My name is {props.name}, family - {props.surname} </h1>
+          <a href={props.link}> Ссылка на мой профиль </a>
+      </div>
+  )
 }
 
 export default App;
