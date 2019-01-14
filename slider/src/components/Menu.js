@@ -39,6 +39,16 @@ const Calls = styled.div `
     }
 `
 
+const CallBtn = styled.button `
+    width: 176px;
+    height: 48px;
+    background-color: #3fc7db;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+`
+
 class Address extends Component {
     render() {
         return (
@@ -75,10 +85,15 @@ class Menu extends Component {
                     </WorkTime>
                 </Col>
                 <Col lg={3}>
-
+                    <Calls>
+                        Звонки принимаются 24 часа
+                        <PhoneNumber phone="8 (846) 922 55 44" />
+                    </Calls>
                 </Col>
                 <Col lg={2}>
-
+                    <CallBtn>
+                        Заказать звонок
+                    </CallBtn>
                 </Col>
             </Row>
         )
