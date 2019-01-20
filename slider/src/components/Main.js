@@ -4,6 +4,8 @@ import '../App.css';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
+import Slider from './Slider';
+
 const Repair = styled.div `
     color: #fff;
     font-weight: 700;
@@ -57,7 +59,7 @@ class Main extends Component {
                 </Col>
                 
                 <Col lg={6} lgOffset={1}>
-
+                    <Slider></Slider>
                 </Col>
             </Row>
         )
